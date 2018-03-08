@@ -1,0 +1,8 @@
+<div class="page-header">
+  <h1>Edit Note</h1>
+</div>
+
+<%= form_for(note, {action: notePath({ note_id: note.ID }), method: "PUT"}) { %>
+  <%= partial("notes/form.html") %>
+  <a href="<%= notePath({ note_id: note.ID }) %>" class="btn btn-warning" data-confirm="Are you sure?">Cancel</a>
+<% } %>

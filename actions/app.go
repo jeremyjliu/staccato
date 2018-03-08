@@ -56,6 +56,9 @@ func App() *buffalo.App {
 
 		app.GET("/", HomeHandler)
 
+		app.Resource("/staccatos", StaccatosResource{})
+		app.Resource("/notes", NotesResource{})
+		app.Resource("/users", UsersResource{})
 		app.ServeFiles("/", assetsBox) // serve files from the public directory
 	}
 

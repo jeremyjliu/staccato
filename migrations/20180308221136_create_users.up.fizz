@@ -1,0 +1,13 @@
+create_table("users", func(t) {
+	t.Column("id", "uuid", {"primary": true})
+	t.Column("name", "string", {})
+	t.Column("email", "string", {})
+	t.Column("provider", "string", {})
+	t.Column("provider_id", "string", {})
+	t.Column("last_login", "timestamp", {})
+	t.Column("administrator", "bool", {})
+})
+
+add_foreign_key("notes", "staccato_id", {"staccatos": ["id"]}, {})
+
+add_foreign_key("notes", "user_id", {"users": ["id"]}, {})

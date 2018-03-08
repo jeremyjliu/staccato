@@ -1,0 +1,6 @@
+create_table("notes", func(t) {
+	t.Column("id", "uuid", {"primary": true})
+	t.Column("staccato_id", "uuid", {})
+	t.Column("user_id", "uuid", {})
+	t.Column("songs", "varchar[]", {})
+})

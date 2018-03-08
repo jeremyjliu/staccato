@@ -1,0 +1,19 @@
+<div class="page-header">
+  <h1>Note#Show</h1>
+</div>
+
+<ul class="list-unstyled list-inline">
+  <li><a href="<%= notesPath() %>" class="btn btn-info">Back to all Notes</a></li>
+  <li><a href="<%= editNotePath({ note_id: note.ID })%>" class="btn btn-warning">Edit</a></li>
+  <li><a href="<%= notePath({ note_id: note.ID })%>" data-method="DELETE" data-confirm="Are you sure?" class="btn btn-danger">Destroy</a>
+</ul>
+
+<p>
+  <strong>StaccatoID</strong>: <%= note.StaccatoID %>
+</p>
+<p>
+  <strong>UserID</strong>: <%= note.UserID %>
+</p>
+<p>
+  <strong>Songs</strong>: <%= note.Songs %>
+</p>

@@ -1,0 +1,6 @@
+- id: "staccato.created.success"
+  translation: "Staccato was successfully created."
+- id: "staccato.updated.success"
+  translation: "Staccato was successfully updated."
+- id: "staccato.destroyed.success"
+  translation: "Staccato was successfully destroyed."

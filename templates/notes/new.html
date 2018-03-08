@@ -1,0 +1,8 @@
+<div class="page-header">
+  <h1>New Note</h1>
+</div>
+
+<%= form_for(note, {action: notesPath(), method: "POST"}) { %>
+  <%= partial("notes/form.html") %>
+  <a href="<%= notesPath() %>" class="btn btn-warning" data-confirm="Are you sure?">Cancel</a>
+<% } %>

@@ -1,0 +1,35 @@
+<div class="page-header">
+  <h1>Staccatos</h1>
+</div>
+<ul class="list-unstyled list-inline">
+  <li><a href="<%= newStaccatosPath() %>" class="btn btn-primary">Create New Staccato</a></li>
+</ul>
+
+<table class="table table-striped">
+  <thead>
+  <th>Open</th>
+    <th>TimeOpen</th>
+    <th>TimeClose</th>
+    <th>&nbsp;</th>
+  </thead>
+  <tbody>
+    <%= for (staccato) in staccatos { %>
+      <tr>
+      <td><%= staccato.Open %></td>
+        <td><%= staccato.TimeOpen %></td>
+        <td><%= staccato.TimeClose %></td>
+        <td>
+          <div class="pull-right">
+            <a href="<%= staccatoPath({ staccato_id: staccato.ID }) %>" class="btn btn-info">View</a>
+            <a href="<%= editStaccatoPath({ staccato_id: staccato.ID }) %>" class="btn btn-warning">Edit</a>
+            <a href="<%= staccatoPath({ staccato_id: staccato.ID }) %>" data-method="DELETE" data-confirm="Are you sure?" class="btn btn-danger">Destroy</a>
+          </div>
+        </td>
+      </tr>
+    <% } %>
+  </tbody>
+</table>
+
+<div class="text-center">
+  <%= paginator(pagination) %>
+</div>
