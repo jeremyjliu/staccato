@@ -27,6 +27,9 @@ type NotesResource struct {
 // List gets all Notes. This function is mapped to the path
 // GET /notes
 func (v NotesResource) List(c buffalo.Context) error {
+	// Get the referenced staccato id from query parameter if present
+	sid := c.Param("sid")
+
 	// Get the DB connection from the context
 	tx, ok := c.Value("tx").(*pop.Connection)
 	if !ok {
@@ -40,7 +43,7 @@ func (v NotesResource) List(c buffalo.Context) error {
 	q := tx.PaginateFromParams(c.Params())
 
 	// Retrieve all Notes from the DB
-	if err := q.All(notes); err != nil {
+	if err := q.Where("staccato_id = ?", sid).All(notes); err != nil {
 		return errors.WithStack(err)
 	}
 

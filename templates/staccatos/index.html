@@ -7,7 +7,8 @@
 
 <table class="table table-striped">
   <thead>
-  <th>Open</th>
+    <th>ID</th>
+    <th>Open</th>
     <th>TimeOpen</th>
     <th>TimeClose</th>
     <th>&nbsp;</th>
@@ -15,7 +16,8 @@
   <tbody>
     <%= for (staccato) in staccatos { %>
       <tr>
-      <td><%= staccato.Open %></td>
+        <td><%= staccato.ID %></td>
+        <td><%= staccato.Open %></td>
         <td><%= staccato.TimeOpen %></td>
         <td><%= staccato.TimeClose %></td>
         <td>

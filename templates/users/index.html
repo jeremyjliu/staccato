@@ -7,12 +7,26 @@
 
 <table class="table table-striped">
   <thead>
-  <th>&nbsp;</th>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Provider</th>
+    <th>ProviderID</th>
+    <th>LastLogin</th>
+    <th>Administrator</th>
+    <th>&nbsp;</th>
   </thead>
   <tbody>
     <%= for (user) in users { %>
       <tr>
-      <td>
+        <td><%= user.ID %></td>
+        <td><%= user.Name %></td>
+        <td><%= user.Email %></td>
+        <td><%= user.Provider %></td>
+        <td><%= user.ProviderID %></td>
+        <td><%= user.LastLogin %></td>
+        <td><%= user.Administrator %></td>
+        <td>
           <div class="pull-right">
             <a href="<%= userPath({ user_id: user.ID }) %>" class="btn btn-info">View</a>
             <a href="<%= editUserPath({ user_id: user.ID }) %>" class="btn btn-warning">Edit</a>

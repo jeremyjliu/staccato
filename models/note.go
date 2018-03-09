@@ -15,7 +15,7 @@ type Note struct {
 	UpdatedAt  time.Time     `json:"updated_at" db:"updated_at"`
 	StaccatoID uuid.UUID     `json:"staccato_id" db:"staccato_id"`
 	UserID     uuid.UUID     `json:"user_id" db:"user_id"`
-	Songs      slices.String `json:"song" db:"song"`
+	Songs      slices.String `json:"songs" db:"songs"`
 }
 
 // String is not required by pop and may be deleted

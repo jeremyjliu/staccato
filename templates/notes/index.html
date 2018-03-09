@@ -7,7 +7,8 @@
 
 <table class="table table-striped">
   <thead>
-  <th>StaccatoID</th>
+    <th>ID</th>
+    <th>StaccatoID</th>
     <th>UserID</th>
     <th>Songs</th>
     <th>&nbsp;</th>
@@ -15,7 +16,8 @@
   <tbody>
     <%= for (note) in notes { %>
       <tr>
-      <td><%= note.StaccatoID %></td>
+        <td><%= note.ID %></td>
+        <td><%= note.StaccatoID %></td>
         <td><%= note.UserID %></td>
         <td><%= note.Songs %></td>
         <td>
