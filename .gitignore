@@ -12,3 +12,6 @@ staccato
 .vscode/
 .grifter/
 .env
+
+# Containers
+containers/data
